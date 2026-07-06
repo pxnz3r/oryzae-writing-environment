@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Shippori Mincho', serif;
+  --font-sans: 'Zen Kaku Gothic New', sans-serif;
+  --color-bg-paper: #fdf0f2;
+  --color-text-ink: #3a3535;
+  --color-text-meta: #8a7e7e;
+  --color-accent-mycelium: #d4848c;
+  --color-capsule-bg: #f7e6e9;
+  --color-capsule-border: #ebd1d5;
+  --color-hairline: #f2dbde;
+}
+
+body {
+  background-color: var(--color-bg-paper);
+  color: var(--color-text-ink);
+  font-family: var(--font-serif);
+  line-height: 2.2;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.spore {
+  position: relative;
+  display: inline-block;
+  transition: color 1s ease;
+  cursor: default;
+}
+
+.spore.connected {
+  color: #b56e75;
+  text-shadow: 0 0 1px rgba(212, 132, 140, 0.2);
+}
+
+.spore::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-accent-mycelium);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease;
+}
+
+.spore.connected::after {
+  transform: scaleX(1);
+}
+
+@keyframes pulse-border {
+  0% { opacity: 0.1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.05); }
+  100% { opacity: 0.1; transform: scale(1); }
+}
+
+.animate-pulse-border {
+  animation: pulse-border 3s infinite;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn { to { opacity: 1; } }
