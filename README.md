@@ -25,6 +25,10 @@ npm run dev
 
 Open http://localhost:3000 in your browser.
 
+## Live Demo
+
+[https://pxnz3r.github.io/oryzae-writing-environment/](https://pxnz3r.github.io/oryzae-writing-environment/)
+
 ## Scripts
 
 | Command | Description |
