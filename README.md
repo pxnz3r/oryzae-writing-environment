@@ -1,5 +1,7 @@
 # Oryzae Writing Environment
 
+<img src="chrome_1tUR1726jR.png" alt="Oryzae Writing Environment screenshot" width="100%" />
+
 A Japanese essay-reading interface featuring an animated mycelium (菌糸体) visual effect. As you read, glowing hyphae-like paths grow from a question capsule to connect with highlighted "spore" words in the text — a visual metaphor for the fermentation of thought.
 
 Built with React, TypeScript, Vite, and Tailwind CSS v4.
